@@ -4,7 +4,9 @@
 CURRENT IDEAS:
 
 Skills
+
   Future Era
+  
     Rocketry (Industry, Rocket material delivery, Mining Extraction from Meteor)
     
     Advanced Mineral Extractor (Mining)
