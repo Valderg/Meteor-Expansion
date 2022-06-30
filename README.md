@@ -70,3 +70,9 @@ Tables
     Laser Microprocessor Factory
     
     
+
+
+
+OBJECT IDEAS:
+
+    Electrical Motor (Consumes Electrical Energy to provide Mechanical Energy for late game)
