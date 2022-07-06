@@ -4,6 +4,9 @@
 CURRENT IDEAS:
 
 ![TechTree](https://github.com/Valderg/Meteor-Expansion/blob/main/TechTree.png)
+
+
+
 Skills
 
    Future Era
