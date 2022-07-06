@@ -5,24 +5,31 @@ CURRENT IDEAS:
 
 Skills
 
-  Future Era
+   Future Era
   
-    Rocketry (Industry, Rocket material delivery, Mining Extraction from Meteor)
+   Modern Engineering
+			
+        Rocketry (Industry, Rocket material delivery, Mining Extraction from Meteor)   
+        Optics Specialist (Mining Tools/Lasers/Laser CNC Tables)
+        Energy Specalist (Nuclear Generator, Hydro Dam, Dyson Sphere)   
+        Robotics (Tools/drones)
+        
+								
+								
+								
+   Materials Expert
+			
+        Advanced Mineral Extractor (Mining)
+        Advanced Mineral Processor (Smelting)
+
+
     
-    Advanced Mineral Extractor (Mining)
-    
-    Advanced Mineral Processor (Smelting)
-    
-    Optics Specialist (Mining Tools/Lasers/Laser CNC Tables)
-    
-    Energy Specalist (Nuclear Generator, Hydro Dam, Dyson Sphere)
-    
-    Robotics (Tools/drones)
-    
+
 
 Tables
 
-  Rocketry
+
+   Rocketry
   
     Engineering Assembly Bay (Rocket Fabrication)
     
