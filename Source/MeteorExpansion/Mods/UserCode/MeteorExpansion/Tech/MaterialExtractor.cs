@@ -87,8 +87,8 @@ namespace Eco.Mods.TechTree
         {
             var recipe = new Recipe();
             recipe.Init(
-                "MaterialExtractor",  //noloc
-                Localizer.DoStr("MaterialExtractor Skill Book"),
+                "Material Extractor",  //noloc
+                Localizer.DoStr("Material Extractor Skill Book"),
                 new List<IngredientElement>
                 {
                     new IngredientElement(typeof(DendrologyResearchPaperBasicItem), 3, typeof(MiningSkill)),

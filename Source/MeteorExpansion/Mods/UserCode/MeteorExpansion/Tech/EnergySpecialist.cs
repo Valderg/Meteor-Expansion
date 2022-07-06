@@ -26,7 +26,7 @@ namespace Eco.Mods.TechTree
     using Eco.Mods.TechTree;
 
     [Serialized]
-    [LocDisplayName("EnergySpecialist")]
+    [LocDisplayName("Energy Specialist")]
     [Ecopedia("Professions", "ModernEngineer", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
     [RequiresSkill(typeof(ModernEngineerSkill), 0), Tag("Modern Engineer Specialty"), Tier(5)]
     [Tag("Specialty")]
@@ -87,7 +87,7 @@ namespace Eco.Mods.TechTree
         {
             var recipe = new Recipe();
             recipe.Init(
-                "EnergySpecialist",  //noloc
+                "Energy Specialist",  //noloc
                 Localizer.DoStr("Energy Specialist Skill Book"),
                 new List<IngredientElement>
                 {
