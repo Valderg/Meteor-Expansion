@@ -1,6 +1,6 @@
 ﻿
 
-namespace Vald.ME.TechTree
+namespace Eco.Mods.TechTree
 {
     using System;
     using System.Collections.Generic;
@@ -22,19 +22,18 @@ namespace Vald.ME.TechTree
     using Eco.Shared.Serialization;
     using Eco.Shared.Services;
     using Eco.Shared.Utils;
-    using Eco.Gameplay.Systems.Tooltip;
+    using Gameplay.Systems.Tooltip;
     using Eco.Mods.TechTree;
-    using Vald.ME.TechTree;
 
     [Serialized]
-    [LocDisplayName("Material Processor")]
-    [Ecopedia("Professions", "Mineral Expert", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
-    [RequiresSkill(typeof(MineralExpertSkill), 0), Tag("Mineral Expert Specialty"), Tier(5)]
+    [LocDisplayName("OpticsSpecialist")]
+    [Ecopedia("Professions", "ModernEngineer", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
+    [RequiresSkill(typeof(ModernEngineerSkill), 0), Tag("Modern Engineer Specialty"), Tier(5)]
     [Tag("Specialty")]
     [Tag("Teachable")]
-    public partial class MaterialProcessorSkill : Skill
+    public partial class OpticsSpecialistSkill : Skill
     {
-        public override LocString DisplayDescription { get { return Localizer.DoStr("Learn how to process modern material into new alloys and new types of resources! Level by refining advanced minerals and crafting related recipes."); } }
+        public override LocString DisplayDescription { get { return Localizer.DoStr("Cutting things with a saw is primitive and can only do so much. Use Lasers to be more precise and efficent. Level by crafting related recipes."); } }
 
         public override void OnLevelUp(User user)
         {
@@ -72,37 +71,37 @@ namespace Vald.ME.TechTree
     }
 
     [Serialized]
-    [LocDisplayName("Material Processor Skill Book")]
+    [LocDisplayName("Optics Specialist Skill Book")]
     [Ecopedia("Items", "Skill Books", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
-    public partial class MaterialProcessorSkillBook : SkillBook<MaterialProcessorSkill, MaterialProcessorSkillScroll> { }
+    public partial class OpticsSpecialistSkillBook : SkillBook<OpticsSpecialistSkill, OpticsSpecialistSkillScroll> { }
 
     [Serialized]
-    [LocDisplayName("Material Processor Skill Scroll")]
-    public partial class MaterialProcessorSkillScroll : SkillScroll<MaterialProcessorSkill, MaterialProcessorSkillBook> { }
+    [LocDisplayName("Optics Specialist Skill Scroll")]
+    public partial class OpticsSpecialistSkillScroll : SkillScroll<OpticsSpecialistSkill, OpticsSpecialistSkillBook> { }
 
 
-    [RequiresSkill(typeof(IndustrySkill), 1)]
-    public partial class MaterialProcessorSkillBookRecipe : RecipeFamily
+    [RequiresSkill(typeof(ElectronicsSkill), 7)]
+    public partial class OpticsSpecialistSkillBookRecipe : RecipeFamily
     {
-        public MaterialProcessorSkillBookRecipe()
+        public OpticsSpecialistSkillBookRecipe()
         {
             var recipe = new Recipe();
             recipe.Init(
-                "MaterialProcessor",  //noloc
-                Localizer.DoStr("MaterialProcessor Skill Book"),
+                "OpticsSpecialist",  //noloc
+                Localizer.DoStr("Optics Specialist Skill Book"),
                 new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(DendrologyResearchPaperBasicItem), 3, typeof(AdvancedSmeltingSkill)),
+                    new IngredientElement(typeof(DendrologyResearchPaperBasicItem), 3, typeof(ElectronicsSkill)),
                 },
                 new List<CraftingElement>
                 {
-                    new CraftingElement<MaterialProcessorSkillBook>()
+                    new CraftingElement<OpticsSpecialistSkillBook>()
                 });
             this.Recipes = new List<Recipe> { recipe };
-            this.LaborInCalories = CreateLaborInCaloriesValue(500, typeof(AdvancedSmeltingSkill));
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MaterialProcessorSkillBookRecipe), 5, typeof(AdvancedSmeltingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(500, typeof(IndustrySkill));
+            this.CraftMinutes = CreateCraftTimeValue(typeof(OpticsSpecialistSkillBookRecipe), 5, typeof(ElectronicsSkill));
             this.ModsPreInitialize();
-            this.Initialize(Localizer.DoStr("Material Processor Skill Book"), typeof(MaterialProcessorSkillBookRecipe));
+            this.Initialize(Localizer.DoStr("Optics Specialist Skill Book"), typeof(OpticsSpecialistSkillBookRecipe));
             this.ModsPostInitialize();
             CraftingComponent.AddRecipe(typeof(ResearchTableObject), this);
         }

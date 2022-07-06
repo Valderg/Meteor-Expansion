@@ -29,14 +29,14 @@ namespace Eco.Mods.TechTree
 
     /// <summary>Auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.</summary>
     [Serialized]
-    [LocDisplayName("Rocketry")]
+    [LocDisplayName("Robotics")]
     [Ecopedia("Professions", "ModernEngineer", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
     [RequiresSkill(typeof(ModernEngineerSkill), 0), Tag("Modern Engineer Specialty"), Tier(5)]
     [Tag("Specialty")]
     [Tag("Teachable")]
-    public partial class RocketrySkill : Skill
+    public partial class RoboticsSkill : Skill
     {
-        public override LocString DisplayDescription { get { return Localizer.DoStr("Being on the planet isnt all its cracked up to be, lets take it to the stars! Craft various rocket related recipes."); } }
+        public override LocString DisplayDescription { get { return Localizer.DoStr("Why do things yourself when you can have a robot do them? Automate everything! Level by crafting related recipes."); } }
 
         public override void OnLevelUp(User user)
         {
@@ -74,37 +74,37 @@ namespace Eco.Mods.TechTree
     }
 
     [Serialized]
-    [LocDisplayName("Rocketry Skill Book")]
+    [LocDisplayName("Robotics Skill Book")]
     [Ecopedia("Items", "Skill Books", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
-    public partial class RocketrySkillBook : SkillBook<RocketrySkill, RocketrySkillScroll> { }
+    public partial class RoboticsSkillBook : SkillBook<RoboticsSkill, RoboticsSkillScroll> { }
 
     [Serialized]
-    [LocDisplayName("Rocketry Skill Scroll")]
-    public partial class RocketrySkillScroll : SkillScroll<RocketrySkill, RocketrySkillBook> { }
+    [LocDisplayName("Robotics Skill Scroll")]
+    public partial class RoboticsSkillScroll : SkillScroll<RoboticsSkill, RoboticsSkillBook> { }
 
 
     [RequiresSkill(typeof(IndustrySkill), 7)]
-    public partial class RocketrySkillBookRecipe : RecipeFamily
+    public partial class RoboticsSkillBookRecipe : RecipeFamily
     {
-        public RocketrySkillBookRecipe()
+        public RoboticsSkillBookRecipe()
         {
             var recipe = new Recipe();
             recipe.Init(
-                "Rocketry",  //noloc
-                Localizer.DoStr("Rocketry Skill Book"),
+                "Robotics",  //noloc
+                Localizer.DoStr("Robotics Skill Book"),
                 new List<IngredientElement>
                 {
                     new IngredientElement(typeof(DendrologyResearchPaperBasicItem), 3, typeof(IndustrySkill)),
                 },
                 new List<CraftingElement>
                 {
-                    new CraftingElement<RocketrySkillBook>()
+                    new CraftingElement<RoboticsSkillBook>()
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.LaborInCalories = CreateLaborInCaloriesValue(500, typeof(IndustrySkill));
-            this.CraftMinutes = CreateCraftTimeValue(typeof(RocketrySkillBookRecipe), 5, typeof(IndustrySkill));
+            this.CraftMinutes = CreateCraftTimeValue(typeof(RoboticsSkillBookRecipe), 5, typeof(IndustrySkill));
             this.ModsPreInitialize();
-            this.Initialize(Localizer.DoStr("Rocketry Skill Book"), typeof(RocketrySkillBookRecipe));
+            this.Initialize(Localizer.DoStr("Robotics Skill Book"), typeof(RoboticsSkillBookRecipe));
             this.ModsPostInitialize();
             CraftingComponent.AddRecipe(typeof(ResearchTableObject), this);
         }

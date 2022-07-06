@@ -24,17 +24,16 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.Utils;
     using Gameplay.Systems.Tooltip;
     using Eco.Mods.TechTree;
-    using Vald.ME.TechTree;
 
     [Serialized]
     [LocDisplayName("Material Extractor")]
-    [Ecopedia("Professions", "Mineral Expert", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
-    [RequiresSkill(typeof(MineralExpertSkill), 0), Tag("Mineral Expert Specialty"), Tier(5)]
+    [Ecopedia("Professions", "Material Expert", createAsSubPage: true, display: InPageTooltip.DynamicTooltip)]
+    [RequiresSkill(typeof(MaterialExpertSkill), 0), Tag("Material Expert Specialty"), Tier(5)]
     [Tag("Specialty")]
     [Tag("Teachable")]
     public partial class MaterialExtractorSkill : Skill
     {
-        public override LocString DisplayDescription { get { return Localizer.DoStr("Hitting rocks with a pickaxe is easy, lets do it with lasers and machines! Level by mining advanced material and crafting related recipes."); } }
+        public override LocString DisplayDescription { get { return Localizer.DoStr("Hitting rocks with a pickaxe is easy, lets do it with lasers and machines! Level by mining advanced Material and refining them down."); } }
 
         public override void OnLevelUp(User user)
         {
@@ -81,7 +80,7 @@ namespace Eco.Mods.TechTree
     public partial class MaterialExtractorSkillScroll : SkillScroll<MaterialExtractorSkill, MaterialExtractorSkillBook> { }
 
 
-    [RequiresSkill(typeof(IndustrySkill), 1)]
+    [RequiresSkill(typeof(MiningSkill), 7)]
     public partial class MaterialExtractorSkillBookRecipe : RecipeFamily
     {
         public MaterialExtractorSkillBookRecipe()

@@ -1,4 +1,4 @@
-﻿namespace Vald.ME.TechTree
+﻿namespace Eco.Mods.TechTree
 {
     using System;
     using System.Collections.Generic;
@@ -25,14 +25,14 @@
     using Eco.Mods.TechTree;
 
     [Serialized]
-    [LocDisplayName("Mineral Expert")]
+    [LocDisplayName("Material Expert")]
     [Tag("Profession")]
-    public partial class MineralExpertSkill : Skill
+    public partial class MaterialExpertSkill : Skill
     {
-        public override LocString DisplayDescription { get { return Localizer.DoStr("Mineral Experts are the top of their class at understanding the physical extents for the material they are using. Very handy for producing high quality high strength material for massive projects."); } }
+        public override LocString DisplayDescription { get { return Localizer.DoStr("Material Experts are the top of their class at understanding the physical extents for the material they are using. Very handy for producing high quality high strength material for massive projects."); } }
 
 
-        public override string Title { get { return Localizer.DoStr("Mineral Expert"); } }
+        public override string Title { get { return Localizer.DoStr("Material Expert"); } }
 
         public static MultiplicativeStrategy MultiplicativeStrategy =
             new MultiplicativeStrategy(new float[] {

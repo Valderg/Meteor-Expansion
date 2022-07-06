@@ -1,4 +1,4 @@
-﻿namespace Vald.ME.TechTree
+﻿namespace Eco.Mods.TechTree
 {
     using System;
     using System.Collections.Generic;
@@ -73,8 +73,8 @@
             UserManager.OnUserLoggedIn.Add(u => {
                 if (!u.Skillset.HasSkill(typeof(ModernEngineerSkill)))
                     u.Skillset.LearnSkill(typeof(ModernEngineerSkill));
-                if (!u.Skillset.HasSkill(typeof(MineralExpertSkill)))
-                    u.Skillset.LearnSkill(typeof(MineralExpertSkill));
+                if (!u.Skillset.HasSkill(typeof(MaterialExpertSkill)))
+                    u.Skillset.LearnSkill(typeof(MaterialExpertSkill));
             });
         }
     }
